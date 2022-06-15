@@ -42,7 +42,7 @@ header{
     background-color: transparent;
 }
 
-#myName{
+.myName{
     font-size: 1.6rem;
     letter-spacing: 4px;
     font-family: var(--libre);
@@ -132,69 +132,23 @@ nav{
     z-index: 100;
 }
 
-.content{
+.subtitle, .title{
     position: absolute;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    top: 15%;
-    padding: 2rem;
 }
 
-.content h2, p{
-    font-family: var(--poppins);
-    font-size: 1.2rem;
-    margin: 8px;
-    width: fit-content;
-    z-index: 101;
-}
-
-.aboutMe{
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-}
-
-.content p{
-    text-align: justify;
-    width: 900px;
-}
-
-.content h1{
-    font-family: var(--libre);
-    font-size: 4rem;
-    width: fit-content;
+.title{
+    top: 44%;
     z-index: 10;
-}
-
-.content h1:hover{
-    color: var(--violet);
-}
-
-@media screen and (max-width: 700px){
-    header{
-        padding: 20px 20px;
-        width: 100vw;
-    }
-
-    .logo h1{
-        font-size: 1rem;
-    }
-
-    #Home button{
-        font-size: 0.7rem;
-    }
-
-    .content .name-title{
-        font-size: 2rem;
-    }
-
-    .content h2, p{
-        font-size: 1rem;
-    }
-}
-
-#Projects{
     font-size: 4rem;
-    padding: 2rem;
+    font-family: var(--libre);
+}
+
+.subtitle{
+    top: 32%;
+    font-size: 1.2rem;
+    z-index: 1;
 }

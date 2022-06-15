@@ -4,29 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Gabriela' Portfolio</title>
   </head>
   <body>
     <section id="Home">
       <header>
         <nav>
-          <h1 id="myName">Gabriela Medeiros</h1>
+          <h1 class="myName">Gabriela Medeiros</h1>
           <div class="navigation">
-            <button onClick="document.getElementById('Home').scrollIntoView();">
+            <button class="btns" onClick="document.getElementById('Home').scrollIntoView();">
               HOME
             </button>
-            <button
+            <button 
+              class="btns"
               onClick="document.getElementById('Projects').scrollIntoView();"
             >
               PROJECTS
             </button>
             <button
+              class="btns"
               onClick="document.getElementById('Skills').scrollIntoView();"
             >
               SKILLS
             </button>
             <button
+              class="btns"
               onClick="document.getElementById('Contact').scrollIntoView();"
             >
               CONTACT
@@ -36,24 +39,24 @@
       </header>
   
       <div class="home">
-        <div class="home-parallax home-parallax-img1"></div>
-        <div class="home-parallax home-parallax-img2"></div>
-        <div class="home-parallax home-parallax-img3"></div>
-        <div class="home-parallax home-parallax-img4"></div>
+        <div class="parallax home__parallax home__parallax-img1" data-rellax-speed="-9"></div>
+        <div class="parallax home__parallax home__parallax-img2" data-rellax-speed="-7"></div>
+        <div class="parallax home__parallax home__parallax-img3" data-rellax-speed="-6"></div>
+        <div class="parallax home__parallax home__parallax-img4" data-rellax-speed="-3"></div>
 
         <div class="content">
-            <h2 id="hi"> 
+            <h2 class="parallax subtitle" data-rellax-speed="-6"> 
                 Hi! I'm
             </h2>
-            <h1 class="name-title">
+            <h1 class="parallax title" data-rellax-speed="-5">
                 Gabriela Medeiros,</br>
                 Web Developer.
             </h1>
-            <div class="aboutMe">
-                <p>
+            <!-- <div class="aboutMe">
+                <p class="parallax" data-rellax-speed="-4">
                     I started programming in 2021, I learned desktop development, mobile development and after learning web development I fell in love with it. When I'm not programming you'll find me reading romance books or watching series and films.
                 </p>
-            </div>
+            </div> -->
         </div>
       </div>
     </section>
@@ -66,6 +69,8 @@
 
     <section id="Contact"></section>
 
-    <script src="/script.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/rellax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
   </body>
 </html>
