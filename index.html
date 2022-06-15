@@ -1,53 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Gabriela' Portfolio</title>
-</head>
-<body>
-    <header>
-        <div class="logo">
-        </div>
+  </head>
+  <body>
+    <section id="Home">
+      <header>
         <nav>
-            <ul>
-                <li>
-                    <a href="#">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        Projects
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        Skills
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        Contact
-                    </a>
-                </li>
-                <div class="myResume">
-                    <a href="#"></a>
-                </div>
-            </ul>
+          <h1 id="myName">Gabriela Medeiros</h1>
+          <div class="navigation">
+            <button onClick="document.getElementById('Home').scrollIntoView();">
+              HOME
+            </button>
+            <button
+              onClick="document.getElementById('Projects').scrollIntoView();"
+            >
+              PROJECTS
+            </button>
+            <button
+              onClick="document.getElementById('Skills').scrollIntoView();"
+            >
+              SKILLS
+            </button>
+            <button
+              onClick="document.getElementById('Contact').scrollIntoView();"
+            >
+              CONTACT
+            </button>
+          </div>
         </nav>
-    </header>
-    <section>
-        <h2 class="hi"> 
-            Hi! I'm
-        </h2>
-        <h1 class="name-title">
-            Gabriela Medeiros, Web Developer.
-        </h1>
-        <p class="abouMe">
-            I started programming in 2021 and after learning web development I fell in love with it. When I'm not programming you'll find me reading or watching series and films.
-        </p>
+      </header>
+  
+      <div class="home">
+        <div class="home-parallax home-parallax-img1"></div>
+        <div class="home-parallax home-parallax-img2"></div>
+        <div class="home-parallax home-parallax-img3"></div>
+        <div class="home-parallax home-parallax-img4"></div>
+
+        <div class="content">
+            <h2 id="hi"> 
+                Hi! I'm
+            </h2>
+            <h1 class="name-title">
+                Gabriela Medeiros,</br>
+                Web Developer.
+            </h1>
+            <div class="aboutMe">
+                <p>
+                    I started programming in 2021, I learned desktop development, mobile development and after learning web development I fell in love with it. When I'm not programming you'll find me reading romance books or watching series and films.
+                </p>
+            </div>
+        </div>
+      </div>
     </section>
-</body>
+
+    <section id="Projects">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, sunt suscipit incidunt a, nesciunt magni fugit culpa quo fuga praesentium maiores sed corrupti labore quam. At dolor quibusdam dolore molestiae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt corporis quisquam, ab commodi veniam provident repellendus fuga esse at obcaecati. Voluptates eius dicta tempora provident, non quam debitis eum a. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam doloremque voluptate praesentium enim ea facere assumenda quisquam fugiat reiciendis rem, architecto expedita, temporibus inventore incidunt doloribus, repudiandae at ut ad. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit ratione animi, repudiandae blanditiis rerum iste officia. Itaque, qui totam rem quibusdam voluptates esse sit, odio sapiente quam error odit fugit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dicta assumenda numquam saepe magnam qui dolorem dolorum odit molestias natus minima reprehenderit aliquid perferendis omnis commodi quasi, quo ullam rem!
+    </section>
+      
+    <section id="Skills"></section>
+
+    <section id="Contact"></section>
+
+    <script src="/script.js"></script>
+  </body>
 </html>
