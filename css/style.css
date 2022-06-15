@@ -103,7 +103,7 @@ nav{
     position: relative;
 }
 
-.home-parallax{
+.home__parallax{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -112,22 +112,22 @@ nav{
     background-position: center;
 }
 
-.home-parallax-img1{
+.home__parallax-img1{
     background-image: url('/img/imgm1.png');
     z-index: 1;
 }
 
-.home-parallax-img2{
+.home__parallax-img2{
     background-image: url('/img/imgm2.png');
     z-index: 10;
 }
 
-.home-parallax-img3{
+.home__parallax-img3{
     background-image: url('/img/imgm3.png');
-    z-index: 100;
+    z-index: 100; 
 }
 
-.home-parallax-img4{
+.home__parallax-img4{
     background-image: url('/img/imgm4.png');
     z-index: 100;
 }
@@ -135,9 +135,8 @@ nav{
 .subtitle, .title{
     position: absolute;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
+    justify-content: center;
 }
 
 .title{
@@ -151,4 +150,10 @@ nav{
     top: 32%;
     font-size: 1.2rem;
     z-index: 1;
+    font-family: var(--poppins);
+}
+
+#Projects{
+    font-size: 2rem;
+    padding: 2rem;
 }
