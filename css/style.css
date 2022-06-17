@@ -148,11 +148,27 @@ nav{
 }
 
 #About{
-    
+    background-color: var(--middleBlue);
+    padding: 3rem;
+    width: 100%;
+}
+
+.aboutMe{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
 }
 
 .myFoto img{
-    height: 500px;
-    border: 1px solid var(--darkBlue);
-    border-radius: 2px;
+    height: 300px;
+    border: 2px solid var(--darkBlue);
+    border-radius: 5px;
+}
+
+.aboutMe p{
+    font-family: var(--poppins);
+    text-align: justify;
+    word-break: break-all;
 }
