@@ -1,2 +1,5 @@
-# myPortfolio
- My web portfolio usign only html and css for now
+# In Portuguese 
+Meu portfólio web, usando html, css e Javascript
+
+# In English
+ My web portfolio usign html, css and Javascript
