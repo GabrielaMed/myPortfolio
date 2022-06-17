@@ -1,40 +1,29 @@
-var rellax = new Rellax('.parallax')
+/* home animation */
 
-gsap.from('.myName', {
-  opacity: 0,
-  duration: 3,
-  delay: 0.5,
-  y: 30,
-  ease: 'expo.out'
+/* Mountains animation */
+let imgOne = document.getElementById('imgOne');
+let imgTwo = document.getElementById('imgTwo');
+let imgThree = document.getElementById('imgThree');
+let imgFour = document.getElementById('imgFour');
+let title = document.getElementById('title');
+let subtitle = document.getElementById('subtitle');
+
+window.addEventListener('scroll', function(){
+  var value = window.scrollY;
+
+  imgOne.style.top = value * 0.5 + 'px';
+  imgTwo.style.top = value * 0.5 + 'px';
+  imgThree.style.top = value * 0.15 + 'px';
+  imgFour.style.top = value * 0.15 + 'px';
+  title.style.top = value * 1 + 'px';
+  subtitle.style.top = value * 1 + 'px';
 })
 
-gsap.from('.btns', {
-  opacity: 0,
-  duration: 3,
-  delay: 0.7,
-  y: 35,
-  ease: 'expo.out',
-  stagger: 0.2
-})
 
-/*Text*/
-gsap.from('.subtitle', {
-  opacity: 0,
-  duration: 3,
-  delay: 1.3,
-  y: 35,
-  ease: 'expo.out'
-})
+/* Animation on reload */
+ScrollReveal().reveal('.myName', { interval: 16, reset: true, delay: 300 });
+ScrollReveal().reveal('.btn', { interval: 16, reset: true, delay: 300 });
+ScrollReveal().reveal('.title', { interval: 16, reset: true, delay: 400 });
+ScrollReveal().reveal('.subtitle', { interval: 16, reset: true, delay: 300 });
 
-gsap.from('.title', {
-  opacity: 0,
-  duration: 3,
-  delay: 1.1,
-  y: 35,
-  ease: 'expo.out'
-})
-
-const sr = ScrollReveal({
-  duration: 2500,
-  reset: true
-})
+/* other animation */

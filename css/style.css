@@ -2,8 +2,9 @@
 
 :root{
     --whiteBlue: #f2f7ff;
-    --darkBlue: #001233;
-    --violet: #7364d2;
+    --darkBlue: #031E31;
+    --middleBlue: #185C72 ;
+    --lightBlue: #90e0ef;
 
     --libre: 'Libre Baskerville', serif;
     --poppins: 'Poppins', sans-serif;
@@ -23,16 +24,6 @@ html{
     scroll-behavior: smooth;
 }
 
-img{
-    max-width: 100%;
-    height: auto;
-}
-
-#Home{
-    width: 100vw;
-    height: 100vh;
-}
-
 header{
     position: absolute;
     top: 0;
@@ -40,28 +31,27 @@ header{
     z-index: 1000;
     width: 100%;
     background-color: transparent;
+    padding: 1.5rem;
 }
 
 .myName{
-    font-size: 1.6rem;
+    font-size: 1rem;
     letter-spacing: 4px;
     font-family: var(--libre);
     font-weight: 300;
 }
 
 nav{
-    max-width: 1200px;
-    margin-left: 1rem;
-    margin-right: 1rem;
     height: 3rem;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
+    gap: 0.9rem;
 }
 
-.navigation{
-    width: 30rem;
+.btns{
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -69,7 +59,7 @@ nav{
 #Home button{
     text-decoration: none;
     font-family: var(--libre);
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     position: relative;
     background-color: transparent;
     border: none;
@@ -82,7 +72,7 @@ nav{
     bottom: -3px;
     width: 0px;
     height: 2px;
-    background-color: var(--violet);
+    background-color: var(--whiteBlue);
     left: 0;
     right: 0;
     margin: auto;
@@ -97,63 +87,72 @@ nav{
     width: 100%;
 }
 
-.home{
+.main-content{
     height: 100vh;
+    width: 100%;
     overflow: hidden;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.home__parallax{
+.home-parallax{
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
     position: absolute;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    object-fit: cover;
 }
 
-.home__parallax-img1{
+.home-parallax-img1{
     background-image: url('/img/imgm1.png');
     z-index: 1;
 }
 
-.home__parallax-img2{
+.home-parallax-img2{
     background-image: url('/img/imgm2.png');
     z-index: 10;
 }
 
-.home__parallax-img3{
+.home-parallax-img3{
     background-image: url('/img/imgm3.png');
     z-index: 100; 
 }
 
-.home__parallax-img4{
+.home-parallax-img4{
     background-image: url('/img/imgm4.png');
     z-index: 100;
 }
 
 .subtitle, .title{
-    position: absolute;
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
 .title{
-    top: 44%;
-    z-index: 10;
-    font-size: 4rem;
+    z-index: 1;
+    font-size: 2rem;
     font-family: var(--libre);
+    text-align: center;
 }
 
 .subtitle{
-    top: 32%;
-    font-size: 1.2rem;
+    font-size: 1rem;
     z-index: 1;
     font-family: var(--poppins);
+    margin-bottom: 1rem;
 }
 
-#Projects{
-    font-size: 2rem;
-    padding: 2rem;
+#About{
+    
+}
+
+.myFoto img{
+    height: 500px;
+    border: 1px solid var(--darkBlue);
+    border-radius: 2px;
 }
