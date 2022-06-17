@@ -25,4 +25,4 @@ ScrollReveal().reveal('.btn', { interval: 16, reset: true, delay: 300 })
 ScrollReveal().reveal('.title', { interval: 16, reset: true, delay: 400 })
 ScrollReveal().reveal('.subtitle', { interval: 16, reset: true, delay: 300 })
 
-/* other animation */
+/* skills animation */

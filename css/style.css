@@ -35,7 +35,7 @@ header{
 }
 
 .myName{
-    font-size: 1rem;
+    font-size: 1.3rem;
     letter-spacing: 4px;
     font-family: var(--libre);
     font-weight: 300;
@@ -59,7 +59,7 @@ nav{
 #Home button{
     text-decoration: none;
     font-family: var(--libre);
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     position: relative;
     background-color: transparent;
     border: none;
@@ -147,10 +147,49 @@ nav{
     margin-bottom: 1rem;
 }
 
+@media screen and (min-width:700px){
+    nav{
+        flex-direction: row;
+    }
+
+    .myName{
+        font-size: 1.6rem;
+    }
+
+    .btns{
+        width: 600px;
+    }
+
+    #Home Button{
+        font-size: 0.9rem;
+    }
+
+    .title{
+        font-size: 3rem;
+    }
+
+    .subtitle{
+        font-size: 1.6rem;
+    }
+}
+
+/* SECTION ABOUT */
+
 #About{
     background-color: var(--middleBlue);
     padding: 3rem;
     width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#About h1{
+    font-family: var(--libre);
+    font-size: 2rem;
 }
 
 .aboutMe{
@@ -161,8 +200,9 @@ nav{
     align-items: center;
 }
 
+
 .myFoto img{
-    height: 300px;
+    width: 200px;
     border: 2px solid var(--darkBlue);
     border-radius: 5px;
 }
@@ -171,4 +211,167 @@ nav{
     font-family: var(--poppins);
     text-align: justify;
     word-break: break-all;
+}
+
+@media screen and (min-width:700px){
+
+    #About h1{
+        font-family: var(--libre);
+        font-size: 2rem;
+    }
+
+    .aboutMe{
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
+    .myFoto{
+        width: 300px;
+    }
+    .aboutMe{
+        font-size: 1.2rem;
+        width: 90%;
+    }
+}
+
+/* SECTION PROJECTS */
+
+#Projects{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darkBlue);
+    padding: 3rem;
+}
+
+#Projects h1{
+    font-family: var(--libre);
+    font-size: 2rem;
+}
+
+.swiper{
+    width: 100%;
+    padding: 50px;
+    margin: 2rem !important;
+}
+
+.swiper-slide{
+    background-position: center;
+    background-size: cover;
+    width: 400px !important;
+    height: 450px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 5px !important;
+
+}
+
+.project{
+    position: relative;
+    padding: 2rem;
+    margin: 2rem;
+    background-color: var(--whiteBlue);
+    border-radius: 5px;
+    width: 300px;
+    height: 400px;
+}
+
+.proj-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-content a, img{
+    border-radius: 5px;
+    width: 240px;
+}
+
+.proj-content p{
+    font-family: var(--poppins);
+    margin-top: 10px;text-align: justify;
+    color: var(--darkBlue);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* SECTION SKILLS */
+
+#Skills{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightBlue);
+    padding: 3rem;
+    gap: 24px;
+}
+
+#Skills h1{
+    font-family: var(--libre);
+    font-size: 2rem;
+    color: var(--middleBlue);
+    margin-bottom: 24px;
+}
+
+.skills-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    gap: 16px;
+}
+
+.box-img{
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.box-img img{
+    width: 40px;
+    position: relative;
+    z-index: 10;
+}
+
+.box-img::before{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 140%;
+    background: linear-gradient(#00ccff, #d400d4);
+    animation: animate 4s linear infinite;
+}
+
+.box-img::after{
+    content: '';
+    position: absolute;
+    inset: 1px;
+    background-color: var(--lightBlue);
+    border-radius: 20px;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }

@@ -4,8 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Links -->
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+  <!-- scripts -->
     <script src="https://unpkg.com/scrollreveal"></script>
+
     <title>Gabriela's Portfolio</title>
   </head>
   <body>
@@ -65,6 +74,7 @@
     </section>
 
     <section id="About">
+      <h1>ABOUT ME</h1>
       <div class="aboutMe">
         <div class="myFoto">
           <img src="/img/myFoto.png" alt="Web Developer Girl">
@@ -76,13 +86,133 @@
     </section>
 
     <section id="Projects">
+      <h1>PROJECTS</h1>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="project">
+              <div class="proj-content">
+                <a href="https://github.com/GabrielaMed/hub_key" target="_blank">
+                  <img src="img/hub_key_logo.jpeg" alt="hub_key_logo"/>
+                </a>
+                <p>
+                  hub_key is a desktop app that controls the come and go of keys. We used: Python, PyQt, PySide6 and Figma.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project">
+              <div class="proj-content">
+                <a href="https://experience-day.herokuapp.com/" target="_blank">
+                  <img src="img/expday.png" alt="Hub Experience Day"/>
+                </a>
+                <p>
+                  Hub Experience Day is an event to bring people together and experience everything Senac Hub Academy has to offer. We used: JavaScript, HTML, CSS, Figma and MySQL.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project">
+              <div class="proj-content">
+                <a href="https://github.com/GabrielaMed/movieApp" target="_blank">
+                  <img src="img/movieApp.jpeg" alt="movieApp"/>
+                </a>
+                <p>
+                  Is a movie app with a list of popular movies. I used: React Native, Expo and the API The Movie DB
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
       
-    <section id="Skills"></section>
+    <section id="Skills">
+      <h1>SKILLS</h1>
+      <div class="skills-content row-1">
+        <div class="box-img">
+          <img src="svg/javascript-svgrepo-com.svg" alt="JavaScript Logo">
+        </div>
+        <div class="box-img">
+          <img src="svg/python-svgrepo-com.svg" alt="Python Logo">
+        </div>
+        <div class="box-img">
+          <img src="svg/php-svgrepo-com.svg" alt="">
+        </div>
+        <div class="box-img">
+          <img src="svg/msql-server-svgrepo-com.svg" alt="MySQL Server Logo">
+        </div>
+      </div>
+      <div class="skills-content row-2">
+        <div class="box-img">
+          <img src="svg/mysql-svgrepo-com.svg" alt="MySQL Logo">
+        </div>
+        <div class="box-img">
+          <img src="svg/postgresql-svgrepo-com.svg" alt="PostgreSql Logo">
+        </div>
+        <div class="box-img">
+          <img src="svg/html-svgrepo-com.svg" alt="HTML Logo">
+        </div>
+        <div class="box-img">
+          <img src="svg/css-svgrepo-com.svg" alt="CSS Logo">
+        </div>
+      </div>
+      <div class="skills-content row-3">
+        <div class="box-img">
+          <img src="svg/atom-svgrepo-com.svg" alt="ReactJs Logo">
+        </div>
+        <div class="box-img">
+          <img src="svg/vue-svgrepo-com.svg" alt="VueJs Logo">
+        </div>
+        <div class="box-img">
+          <img src="svg/git-svgrepo-com.svg" alt="Git Logo">
+        </div>
+        <div class="box-img">
+          <img src="svg/adobe-xd-svgrepo-com.svg" alt="Adobe XD Logo">
+        </div>
+      </div>
+      <div class="skills-content row-4">
+        <div class="box-img">
+          <img src="svg/figma-logo-thin-svgrepo-com.svg" alt="Figma Logo">
+        </div>
+        <div class="box-img">
+          <img src="svg/visual-studio-code-svgrepo-com.svg" alt="VS Code Logo">
+        </div>
+        <div class="box-img">
+          <img src="svg/agile-svgrepo-com.svg" alt="SCRUM Logo">
+        </div>
+        <div class="box-img">
+          <img src="svg/trello-svgrepo-com.svg" alt="Trello Logo">
+        </div>
+      </div>
+      
+    </section>
 
     <section id="Contact"></section>
 
+    <!-- scripts -->
     <script src="/js/main.js"></script>
-    
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+    </script>
   </body>
 </html>
