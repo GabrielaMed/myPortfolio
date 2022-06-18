@@ -236,7 +236,6 @@ nav{
 /* SECTION PROJECTS */
 
 #Projects{
-    position: relative;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -303,7 +302,6 @@ nav{
 /* SECTION SKILLS */
 
 #Skills{
-    position: relative;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -367,6 +365,11 @@ nav{
     border-radius: 20px;
 }
 
+.swiper-pagination-bullet-active{
+    background-color: var(--lightBlue) !important;
+}
+
+
 @keyframes animate{
     0%{
         transform: rotate(0deg);
@@ -374,4 +377,209 @@ nav{
     100%{
         transform: rotate(360deg);
     }
+}
+
+/* SECTION CONTACT */
+
+#Contact{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--middleBlue);
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+#Contact h1{
+    font-family: var(--libre);
+    font-size: 2rem;
+    margin-bottom: 24px;
+}
+
+.contact-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.holdForm{
+    width: 300px;
+    height: 320px;
+    padding: 2rem 1rem;
+    border-radius: 5px;
+    background: rgba(0,0,0,.5);
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    position: relative;
+}
+
+.holdForm form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.input-form{
+    outline: none;
+    border: none;
+    background: none;
+    border-bottom: 1px solid var(--lightBlue);
+    padding: 0 5px;
+    width: 100%;
+    display: block;
+    color: var(--whiteBlue);
+    font-family: var(--poppins);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.holdForm textarea{
+    border: 1px solid var(--lightBlue);
+    resize: none;
+}
+
+.focus-input-form{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.input-form::placeholder{
+    color: var(--whiteBlue);
+    font-family: var(--poppins);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+.focus-input-form::before{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.4s;
+    background-color: var(--lightBlue);
+}
+
+.focus-input-form::after{
+    content: attr(placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: -15px;
+    left: 0px;
+    padding-left: 5px;
+    transition: all 0.4s;
+    color: var(--whiteBlue);
+    font-family: var(--poppins);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.input-form:focus + .focus-input-form::after{
+    top: -20px;
+    font-size: 0.6rem;
+    color: var(--lightBlue);
+}
+
+.input-form:focus + .focus-input-form::before{
+    width: 100%;
+}
+
+.wrap-input{
+    width: 100%;
+    position: relative;
+}
+
+.btn-form{
+    height: 35px;
+    width: 120px;
+    border: 1px solid var(--lightBlue);
+    background: transparent;
+    font-family: var(--poppins);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.btn-form:hover{
+    border: 2px solid var(--lightBlue);
+}
+
+.socials h2{
+    font-family: var(--libre);
+    font-size: 1rem;
+    margin: 16px 0;
+    font-weight: 600;
+}
+
+.holdSvg a{
+    text-decoration: none;
+}
+
+.holdSvg{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.holdSvg a, svg:hover{
+    fill: var(--lightBlue);
+}
+
+@media screen and (min-width:700px){
+    #Contact{
+        padding: 3rem;
+    }
+    .contact-content{
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        width: 100%;
+
+    }
+
+    .holdForm{
+        width: 400px;
+        height: 440px;
+    }
+}
+
+/* Footer */
+
+footer{
+    height: 60px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background-color: var(--darkBlue);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h1{
+    font-family: var(--libre);
+    font-size: 0.8rem;
 }
