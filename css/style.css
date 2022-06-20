@@ -87,6 +87,78 @@ nav{
     width: 100%;
 }
 
+#btn-login{
+    font-family: var(--libre);
+    font-size: 1rem;
+    border: none;
+    background-color: var(--lightBlue);
+    position: relative;
+    transition: 0.5s;
+    padding: 10px;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#btn-login:hover{
+    letter-spacing: 0.2rem;
+    box-shadow: 0 0 35px var(--lightBlue);
+    background: var(--lightBlue);
+}
+
+#btn-login::before{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background-color: #007D93;
+}
+
+#btn-login span{
+    position: relative;
+    z-index: 1;
+}
+
+#btn-login i{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+#btn-login i::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 4px;
+    background-color: #007D93;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+#btn-login:hover i::before{
+    width: 20px;
+    left: 20%;
+}
+
+#btn-login i::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 10px;
+    height: 5px;
+    background-color: #007D93;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+#btn-login:hover i::after{
+    width: 20px;
+    left: 80%;
+}
+
+
 .main-content{
     height: 100vh;
     width: 100%;
@@ -348,6 +420,10 @@ nav{
     z-index: 10;
 }
 
+.skills-content  i{
+    color: #031E31;
+}
+
 .box-img::before{
     content: '';
     position: absolute;
@@ -530,13 +606,15 @@ nav{
     font-family: var(--libre);
     font-size: 1rem;
     margin: 16px 0;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .holdSvg a{
     text-decoration: none;
     font-family: var(--poppins);
     font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
     display: flex;
     align-items: center;
     text-transform: uppercase;
@@ -550,7 +628,14 @@ nav{
     align-items: center;
 }
 
-.holdSvg a, svg:hover{
+.holdSvg span{
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.holdSvg a, i:hover{
     fill: var(--lightBlue);
 }
 
@@ -620,6 +705,7 @@ nav{
         transform-origin: right;
         transform: skewY(45deg);
         transition: 0.5s;
+        filter: brightness(0.7);
     }
 
     .holdSvg li::after{
@@ -632,23 +718,26 @@ nav{
         background-color: #06171D;
         transform-origin: bottom;
         transform: skewX(45deg);
-        
+        filter: brightness(0.7);
+        transition: 0.5s;
     }
 
     .holdSvg li:hover{
         background-color: #113F4E;
-        transform: translateX(50px);
+        transform: translateX(-50px);
     }
 
     .holdSvg li:hover::before{
         background-color: #113F4E;
+        filter: brightness(0.7);
     }
 
     .holdSvg li:hover::after{
         background-color: #113F4E;
+        filter: brightness(0.7);
     }
 
-    .holdSvg a svg{
+    .holdSvg a{
         display: block;
         letter-spacing: 0.05em;
         transition: 0.5s;
@@ -656,7 +745,7 @@ nav{
         fill: rgba(153, 153, 153, 0.738);
     }
 
-    .holdSvg li:hover a svg{
+    .holdSvg li:hover a{
         color: var(--whiteBlue);
         fill: var(--whiteBlue);
         font-weight: 600;
@@ -664,6 +753,27 @@ nav{
 
     .holdSvg li:last-child::after{
         box-shadow: -120px 120px 20px rgba(0,0,0,.25);
+    }
+
+    .holdSvg li span{
+        position: absolute;
+        top: 0;
+        left: -40px;
+        width: 40px;
+        height: 100%;
+        transform-origin: right;
+        transform: skewY(45deg);
+        transition: 0.5s;
+        filter: brightness(0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        opacity: 0.5;
+    }
+
+    .holdSvg li:hover span{
+        opacity: 1;
     }
 }
 
