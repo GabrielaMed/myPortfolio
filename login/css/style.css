@@ -18,7 +18,6 @@
 
 body{
     background-image: linear-gradient(to bottom, #185C72, #031E31);
-    height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -26,16 +25,35 @@ body{
     flex-direction: column;
 }
 
+.content{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .holdForm{
-    width: 400px;
-    height: 420px;
+    width: 380px;
+    height: 400px;
     padding: 2rem 1rem;
     border-radius: 5px;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     backdrop-filter: blur(18.1px);
     background: rgba(255, 255, 255, 0.11);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
 }
 
+.holdForm h1{
+    font-family: var(--libre);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
 
 .holdForm form{
     display: flex;
@@ -130,7 +148,7 @@ body{
 
 .btn-form{
     height: 35px;
-    width: 100px;
+    width: 120px;
     border: 1px solid var(--lightBlue);
     background: transparent;
     font-family: var(--poppins);
@@ -142,4 +160,115 @@ body{
 
 .btn-form:hover{
     border: 2px solid var(--lightBlue);
+    letter-spacing: 3px;
+    transition: 0.5s;
 } 
+
+.holdForm a, strong{
+    font-family: var(--poppins);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.holdForm a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.holdForm a:hover{
+    color: var(--lightBlue);
+}
+
+.holdForm a:hover strong{
+    color: var(--lightBlue);
+}
+
+.arrow{
+    text-decoration: none;
+    
+}
+
+.msg{
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--lightBlue);
+    border-radius: 5px;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.resume{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.resume h1{
+    font-family: var(--libre);
+    margin: 0.5rem 0;
+    font-size: 2rem;
+}
+
+.resume h2{
+    font-family: var(--libre);
+    color: #00ab44;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+
+.resume p{
+    font-family: var(--poppins);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+#italic{
+    font-family: var(--poppins);
+    font-style: italic;
+}
+
+#name{
+    margin-bottom: 24px;
+}
+
+#objetivo{
+    margin-bottom: 24px;
+}
+
+#comp{
+    margin-bottom: 24px;
+}
+
+#exp{
+    margin-bottom: 24px;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--poppins);
+    width: fit-content;
+}
+
+.links a:hover{
+    color: #00ab44;
+}
+
+.hold{
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0;
+}
+
+.display-flex{
+    display: flex;
+    align-items: center;
+}

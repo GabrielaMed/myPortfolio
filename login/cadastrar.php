@@ -10,19 +10,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Cadastrar</title>
 </head>
 <body>
-    <div id="corpo-form-cad">
-        <h1>CADASTRAR</h1>
-        <form method="post">
-            <input class="input" type="text" name="nome" placeholder="Nome Completo" maxlength="40">
-            <input class="input" type="text" name="telefone" placeholder="Telefone" maxlength="10">
-            <input class="input" type="email" name="email" placeholder="E-mail do Usuário" maxlength="50">
-            <input class="input" type="password" name="senha" placeholder="Senha" maxlength="15">
-            <input class="input" type="password" name="confSenha" placeholder="Confirmar Senha" maxlength="15">
-            <input class="input" type="submit" value="CADASTRAR">
-        </form>
+    <div class="content">
+        <div class="holdForm">
+            <a href="index.php" class="arrow">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <h1>Singup</h1>
+            <form method="post">
+            <div class="wrap-input">
+                <input class="input-form" type="text" name="nome" maxlength="40">
+                <span class="focus-input-form" placeholder="Name"></span>
+            </div>
+            <div class="wrap-input">
+                <input class="input-form" type="text" name="telefone" maxlength="10">
+                <span class="focus-input-form" placeholder="Phone"></span>
+            </div>
+            <div class="wrap-input">
+                <input class="input-form" type="email" name="email" maxlength="50">
+                <span class="focus-input-form" placeholder="E-mail"></span>
+            </div>
+            <div class="wrap-input">
+                <input class="input-form" type="password" name="senha" maxlength="15">
+                <span class="focus-input-form" placeholder="Password"></span>
+            </div>
+            <div class="wrap-input">
+                <input class="input-form" type="password" name="confSenha" maxlength="15">
+                <span class="focus-input-form" placeholder="Confirm Password"></span>
+            </div>
+            <input class="btn-form" type="submit" value="CADASTRAR">
+            </form>
+        </div>
     </div>
 
     <?php

@@ -13,20 +13,22 @@
     <title>Tela Login 57</title>
 </head>
 <body>
-    <div class="holdForm">
-        <h1>ENTRAR</h1>
-        <form method="post">
-            <div class="wrap-input">
-                <input type="email" class="input-form" name="email" autocomplete="off">
-                <span class="focus-input-form" placeholder="User"></span>
-            </div>
-            <div class="wrap-input">
-                <input type="password" class="input-form" name="senha" autocomplete="off">
-                <span class="focus-input-form" placeholder="Password"></span>
-            </div>
-            <input class="btn-form" type="submit" value="ACESSAR">
+    <div class="content">
+        <div class="holdForm">
+            <h1>Singin</h1>
+            <form method="post">
+                <div class="wrap-input">
+                    <input type="email" class="input-form" name="email" autocomplete="off">
+                    <span class="focus-input-form" placeholder="E-mail"></span>
+                </div>
+                <div class="wrap-input">
+                    <input type="password" class="input-form" name="senha" autocomplete="off">
+                    <span class="focus-input-form" placeholder="Password"></span>
+                </div>
+                <input class="btn-form" type="submit" value="ACESSAR">
+            </form>
             <a href="cadastrar.php">Ainda não é cadastrado? <strong>Cadastre-se!</strong></a>
-        </form>
+        </div>
     </div>
     <?php
         if(isset($_POST['email']))
@@ -47,7 +49,7 @@
                     else
                     {
                         ?>
-                            <div id="msg">
+                            <div class="msg">
                                 Campos não conferem
                             </div>
                         <?php
@@ -56,7 +58,7 @@
                 else
                 {
                     ?>
-                        <div id="msg">
+                        <div class="msg">
                             <?php echo "Erro de conexão com banco: ".$usuario->msgError?>
                         </div>
                     <?php
@@ -65,7 +67,7 @@
             else
             {
                 ?>
-                    <div id="msg">
+                    <div class="msg">
                         Preencha todos os campos
                     </div>
                 <?php
