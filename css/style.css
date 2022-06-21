@@ -380,7 +380,7 @@ nav{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--lightBlue);
+    background-color: var(--middleBlue);
     padding: 3rem;
     gap: 24px;
 }
@@ -388,7 +388,6 @@ nav{
 #Skills h1{
     font-family: var(--libre);
     font-size: 2rem;
-    color: var(--middleBlue);
     margin-bottom: 24px;
 }
 
@@ -419,10 +418,6 @@ nav{
     z-index: 10;
 }
 
-.skills-content  i{
-    color: #031E31;
-}
-
 .box-img::before{
     content: '';
     position: absolute;
@@ -436,7 +431,7 @@ nav{
     content: '';
     position: absolute;
     inset: 1px;
-    background-color: var(--lightBlue);
+    background-color: var(--middleBlue);
     border-radius: 20px;
 }
 
@@ -465,7 +460,7 @@ nav{
     gap: 16px;
     justify-content: center;
     align-items: center;
-    background-color: var(--middleBlue);
+    background-color: var(--darkBlue);
     padding: 1rem;
     box-sizing: border-box;
 }
@@ -487,9 +482,9 @@ nav{
 .holdForm{
     width: 300px;
     height: 320px;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     border-radius: 5px;
-    background: #09232B;
+    background: #f2f7ff27;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     position: relative;
 }
@@ -500,13 +495,14 @@ nav{
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    padding-top: 2rem;
 }
 
 .input-form{
     outline: none;
     border: none;
     background: none;
-    border-bottom: 1px solid var(--lightBlue);
+    border-bottom: 1px solid var(--darkBlue);
     padding: 0 5px;
     width: 100%;
     display: block;
@@ -518,9 +514,14 @@ nav{
 }
 
 .holdForm textarea{
-    border: 1px solid var(--lightBlue);
+    border: 1px solid var(--darkBlue);
     resize: none;
     padding: 8px;
+}
+
+.holdForm textarea:focus{
+    border: 1px solid var(--lightBlue);
+    transition: 0.5s;
 }
 
 .focus-input-form{
@@ -588,7 +589,7 @@ nav{
 .btn-form{
     height: 35px;
     width: 100px;
-    border: 1px solid var(--lightBlue);
+    border: 1px solid var(--darkBlue);
     background: transparent;
     font-family: var(--poppins);
     font-size: 0.7rem;
@@ -598,7 +599,10 @@ nav{
 }
 
 .btn-form:hover{
-    border: 2px solid var(--lightBlue);
+    border: 2px solid var(--whiteBlue);
+    letter-spacing: 3px;
+    width: 110px;
+    transition: 0.5s;
 }
 
 .socials h2{
@@ -635,7 +639,7 @@ nav{
 }
 
 .holdSvg a, i:hover{
-    fill: var(--lightBlue);
+    fill: var(--darkBlue);
 }
 
 .holdSvg ul{
@@ -783,6 +787,7 @@ footer{
     width: 100%;
     position: relative;
     bottom: 0;
+    box-shadow: 0 15px 25px rgba(0,0,0,.8);
     background-color: var(--darkBlue);
     padding: 2rem;
     display: flex;
