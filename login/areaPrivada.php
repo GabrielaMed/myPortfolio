@@ -99,6 +99,40 @@
             </div>
         
         </div>
+
+        <div id="proj">
+            <h2>Projetos</h2>
+            <div class="hold">
+                <div class="display-flex">
+                    <strong>Hub_key</strong>
+                    <p id="italic">- aplicativo desktop</p>
+                </div>
+                <p>
+                Objetivo: eliminar o uso de ferramentas à mão para automatizar com agilidade o registro dos empréstimos de chaves.<br/>
+                Linguagens/Ferramentas/Metodologia: Python, PySide6, QtDesigner, SQLite, Figma, Trello e Metodologia Scrum.
+                </p>
+            </div>
+            <div class="hold">
+                <div class="display-flex">
+                    <strong>Hub Experience Day</strong>
+                    <p id="italic">- aplicação web</p>
+                </div>
+                <p>
+                Objetivo: divulgação do evento Hub Experience Day e mostrar a programação do evento para que a pessoa possa se inscrever na palestra desejada.<br/>
+                Linguagens/Ferramentas/Metodologia: JavaScript, HTML5, CSS, MySQL, Figma e Metodologia Scrum.
+                </p>
+            </div>
+            <div class="hold">
+                <div class="display-flex">
+                    <strong>MovieApp</strong>
+                    <p id="italic">- aplicativo mobile</p>
+                </div>
+                <p>
+                Objetivo: mostrar lista de filmes populares da API The Movie DB.<br/>
+                Linguagens/Ferramentas/Metodologia: JavaScript, React Native, Expo, API The Movie DB.
+                </p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
