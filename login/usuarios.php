@@ -42,7 +42,7 @@ class Usuario
     public function logar($email, $senha)
     {
         global $pdo;
-        //verificar se email e senha estão corretor
+        //verifica se email e senha estão corretos
         $sql = $pdo->prepare("SELECT id_usuario FROM usuarios WHERE email = :e AND senha = :s");
         $sql->bindValue(":e", $email);
         $sql->bindValue(":s", md5($senha));

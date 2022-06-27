@@ -36,13 +36,13 @@
             $email = addslashes($_POST['email']);
             $senha = addslashes($_POST['senha']);
 
-            if(!empty($email) && !empty($senha))
+            if(!empty($email) && !empty($senha)) // se os campos não tiverem vazios
             {
                 $usuario->connect("login57", "localhost", "root", "");
                 
                 if($usuario->msgError == "")
                 {
-                    if($usuario->logar($email, $senha))
+                    if($usuario->logar($email, $senha)) //se tiver tudo certo abre a area privada
                     {
                         header("location: areaPrivada.php");
                     }
@@ -50,7 +50,7 @@
                     {
                         ?>
                             <div class="msg">
-                                Campos não conferem
+                                Email ou senha errados!
                             </div>
                         <?php
                     }
@@ -68,7 +68,7 @@
             {
                 ?>
                     <div class="msg">
-                        Preencha todos os campos
+                        Preencha todos os campos!
                     </div>
                 <?php
             }

@@ -62,9 +62,9 @@
                 $usuario->connect("login57", "localhost", "root", "");
                 if($usuario->msgError == "")// Significa que conectou
                 {
-                    if($senha == $confirmarSenha)
+                    if($senha == $confirmarSenha)// se confirmar senha e senha são iguais
                     {
-                        if($usuario->cadastrar($nome, $telefone, $email, $senha))
+                        if($usuario->cadastrar($nome, $telefone, $email, $senha))// cadastra usuario
                         {
                             ?>
 
@@ -95,10 +95,10 @@
                         <?php
                     }
                 }
-                else
+                else //algum erro de conexão
                 {
-                    ?>
-                        <div class="msg">
+                    ?> 
+                        <div class="msg"> 
                             <?php echo "Erro: ".$usuario->msgError ?>
                         </div>
 
